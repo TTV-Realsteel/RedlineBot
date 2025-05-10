@@ -877,5 +877,3 @@ with open ("token.txt") as f:
     token = f.read()
 
 bot.run(token)
-
-TOKEN = os.getenv("MTM3MDQ1MTAyMTY0MTU1MTk2Mw.Gitklg.n0RB2C4dQUgazR7FtlqCmVi7VdK7r01kBlFROI")
