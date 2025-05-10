@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logs - Redline Syndicate Security</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="sidebar">
+      <h2>Redline</h2>
+      <ul>
+        <li><a href="logs.html">Logs</a></li>
+        <li><a href="stats.html">Stats</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="top-bar">
+        <span class="username" id="usernameLabel">Logged in as: Guest</span>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+      <header>
+        <h1>Security Logs</h1>
+        <p>Here are the latest logs from the Redline Security Bot:</p>
+      </header>
+
+      <h1>Action Logs</h1>
+      <div id="logs"></div>
+  
+      <script>
+          // Fetch logs from the backend and display them
+          fetch('https://your-app-name.herokuapp.com/logs')  // Use your actual deployed URL
+              .then(response => response.json())
+              .then(data => {
+                  const logsContainer = document.getElementById('logs');
+                  data.forEach(log => {
+                      const logItem = document.createElement('div');
+                      logItem.classList.add('log-item');
+                      logItem.innerHTML = `<p><strong>${log.action}</strong>: ${log.user} (Reason: ${log.reason})</p>`;
+                      logsContainer.appendChild(logItem);
+                  });
+              })
+              .catch(error => console.error('Error fetching logs:', error));
+      </script>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Redline Syndicate Security. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+    </ul>
+    <p>You can reach out via Discord or by email at support@redlinesecurity.com</p>
+  </footer>
+  <script src="js/dashboard.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

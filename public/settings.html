@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Settings - Redline Syndicate Security</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="sidebar">
+      <h2>Redline</h2>
+      <ul>
+        <li><a href="logs.html">Logs</a></li>
+        <li><a href="stats.html">Stats</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="top-bar">
+        <span class="username" id="usernameLabel">Logged in as: Guest</span>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+
+      <div class="content-body">
+        <h2>Settings</h2>
+        <div class="settings-container">
+            <h1>Settings Page</h1>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Redline Syndicate Security. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+    </ul>
+    <p>You can reach out via Discord or by email at support@redlinesecurity.com</p>
+  </footer>
+  <script src="js/settings.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

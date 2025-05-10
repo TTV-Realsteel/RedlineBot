@@ -1,0 +1,14 @@
+[
+  {
+    "type": "Join",
+    "user": "User123",
+    "message": "User123 joined the server."
+  },
+  {
+    "type": "Message Edit",
+    "user": "User456",
+    "message": "User456 edited a message.",
+    "old_message": "Hello world",
+    "new_message": "Hello universe"
+  }
+]
